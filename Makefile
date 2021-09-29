@@ -24,5 +24,5 @@ install:
 	@make build
 	@echo "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Install package \033[0m"
 	@rm -fr $(MOD_PATH)
-	@cp -r ./build/$(MOD_ALIAS) $(MOD_PATH)
+	@cp -r ./build/Factorio-Stack-Size-Tooltip $(MOD_PATH)
 	@echo "Start the game and check the result"
