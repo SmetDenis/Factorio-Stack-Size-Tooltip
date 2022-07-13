@@ -31,7 +31,10 @@ function set_simple_description(item)
     if item == nil then return end
 
     if item.stack_size ~= nil then
-        item.localised_description = {"other.stack-size-description", item.stack_size}
+		local tmp = item.localised_description
+		if tmp == nil then tmp = "" end
+        item.localised_description = {"", tmp, {"other.stack-size-description", 
+		item.stack_size}}
         if debug == true then 
             log(
                 "S: " .. 
@@ -50,7 +53,9 @@ function set_extended_description(item, description)
     if description == nil then description = {"item-description." .. item.name} end
 
     if item.stack_size ~= nil then
-        item.localised_description = {"other.stack-size-description-ext", item.stack_size, description}
+		local tmp = item.localised_description
+		if tmp == nil then tmp = "" end
+        item.localised_description = {"", tmp,  {"other.stack-size-description", item.stack_size}, "\n", description}
         if debug == true then 
             log(
                 "E: " .. 

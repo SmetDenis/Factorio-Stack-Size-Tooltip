@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2022-07-13
+Version author: Tireon
+  Changes:
+	- Fixed tooltip description to handle (not erase) tooltips from other  mods https://mods.factorio.com/mod/stack-size-tooltip/discussion/615857de0c380efe61b80bf7
+	- Locale texts (originaly two) reduced to only single one. Now only stack-size-description gets used, stack-size-description-ext is not needed anymore and was removed from locales.
+	- Fixed invalid name of russian locale (en.cfg -> ru.cfg)
+	- Processing moved (renamed) from data-final-fixes.lua to data-updates.lua, which is more proper for the intent.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 2021-09-29
   Changes:
